@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+  <head>
+    <title>DigiCycle</title>
+    <link rel="stylesheet" href="index.css"></link>
+  </head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+  <script src="/index.js"></script>
+  <body>
+    <div class="container">
+        <div class="content">
+            <div class="header">
+                <h1 id="title">DigiCycle Input Deposit Form ⚡️</h1>
+            </div>
+
+          <form id="user_form" action="" method="get" class="info_form">
+            <div class="info_form">
+              <label for="first_name">Enter first name: </label>
+              <input type="text" name="first_name" id="first_name" required />
+            </div>
+            <div class="info_form">
+              <label for="last_name">Enter last name: </label>
+              <input type="text" name="last_name" id="last_name" required />
+            </div>
+            <div class="info_form">
+              <label for="email">Email address: </label>
+              <input
+                type="email"
+                name="email_address"
+                id="email_address"
+                required
+              />
+            </div>
+            <div class="info_form">
+              <label for="phone_number">Phone number: </label>
+              <input
+                type="number"
+                name="phone_number"
+                id="phone"
+                required
+                minlength="9"
+                maxlength="9"
+              />
+            </div>
+            <div class="info_form">
+              <label for="postal">Postal code: </label>
+              <input type="text" name="postal" id="postal" required minlength="6" maxlength="6"/>
+            </div>
+            <div class="info_form">
+              <label for="location">Location of deposit: </label>
+              <input
+                type="text"
+                name="location"
+                id="location"
+                required
+              />
+            </div>
+            <div class="info_form">
+              <label for="device_type">Input device type: </label>
+              <select name="device_type" id="device" required>
+                <option value="">--Please choose an option--</option>
+                <option value="laptop">Laptop</option>
+                <option value="mobile">Smart Phone</option>
+                <option value="tablet">Tablet</option>
+                <option value="smart_watch">Smart Watch</option>
+                <option value="monitor">Computer Monitor</option>
+                <!-- <option value="toaster">Toaster</option>
+                <option value="fridge">Fridge</option>
+                <option value="laundry">Laundry Machine</option> 
+                <option value="printer">Printer</option>-->
+              </select>
+            </div>
+            <div class="info_form">
+              <label for="serial">Device serial number: </label>
+              <input type="text" name="serial" id="serial" required />
+            </div>
+            <!-- <div class="info_form">
+              <label for="token">Token Value: </label>
+              <input type="number" name="token" id="token" required />
+            </div> -->
+
+            <!-- <div class="info_form" id="form" action="">
+              <input placeholder="Type a message here" />
+            </div> -->
+            <div class="info_form">
+              <!-- <input type="submit" value="Submit Form" /> -->
+              <input type="reset" value="Reset" />
+              <button alt="send">Submit</button></form>
+            </div>
+          </form>
+            <!-- <form id="form" action="">
+            <input id="amt" autocomplete="off" placeholder="Enter the token amount"/> -->
+            <!-- <input id="id" autocomplete="off" placeholder="Enter the account id"/>
+            <button alt="send"> </button> --> 
+          </form>
+        </div>
+      </div>
+  </body>
+</html>
